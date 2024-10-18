@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Price Predictor</h1>
+        <form action="/predict" method="POST">
+            <label for="model">Car Model:</label>
+            <input type="text" name="model" id="model" required>
+            
+            <label for="year">Year:</label>
+            <input type="number" name="year" id="year" required>
+            
+            <label for="transmission">Transmission:</label>
+            <select name="transmission" id="transmission" required>
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select>
+            
+            <label for="mileage">Mileage:</label>
+            <input type="number" name="mileage" id="mileage" required>
+            
+            <label for="fuelType">Fuel Type:</label>
+            <input type="text" name="fuelType" id="fuelType" required>
+            
+            <label for="tax">Tax:</label>
+            <input type="number" name="tax" id="tax" required>
+            
+            <label for="mpg">MPG:</label>
+            <input type="number" name="mpg" id="mpg" required>
+            
+            <label for="engineSize">Engine Size:</label>
+            <input type="number" name="engineSize" id="engineSize" required>
+            
+            <button type="submit">Predict Price</button>
+        </form>
+    </div>
+</body>
+</html>
